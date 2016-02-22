@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrS-8p-9HV">
+                                <rect key="frame" x="201" y="287" width="193" height="382"/>
+                                <color key="backgroundColor" red="0.049775168299674988" green="0.88813674449920654" blue="0.53284209966659546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="pause">
+                                    <color key="titleShadowColor" red="0.08489701896905899" green="0.74380296468734741" blue="0.18963003158569336" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pUR-Ea-O6d"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubb-sE-Kv7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MU3-Jk-um2">
+                                        <rect key="frame" x="121" y="0.0" width="132" height="289"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPw-N9-sW8">
+                                        <rect key="frame" x="293" y="8" width="64" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tc4-FM-28E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.087397031486034393" green="0.12735104560852051" blue="0.033866163343191147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DR0-7C-d9B">
+                                <rect key="frame" x="0.0" y="287" width="193" height="382"/>
+                                <color key="backgroundColor" red="0.045947916805744171" green="0.33856022357940674" blue="0.92077499628067017" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="ghO-17-DGw"/>
+                                    <constraint firstAttribute="width" constant="193" id="qVv-DX-iwf"/>
+                                </constraints>
+                                <state key="normal" image="play">
+                                    <color key="titleShadowColor" red="0.8206908106803894" green="0.95384317636489868" blue="0.95415729284286499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qVv-DX-iwf"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="playAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tfq-K9-nxU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="IrS-8p-9HV" firstAttribute="bottom" secondItem="DR0-7C-d9B" secondAttribute="bottom" id="7bE-tc-UJt"/>
+                            <constraint firstItem="DR0-7C-d9B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DWb-NS-tFC"/>
+                            <constraint firstItem="DR0-7C-d9B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JZR-5O-ON6"/>
+                            <constraint firstItem="IrS-8p-9HV" firstAttribute="top" secondItem="DR0-7C-d9B" secondAttribute="top" id="Kg8-VB-flb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IrS-8p-9HV" secondAttribute="trailing" constant="-35" id="LpA-9x-XEH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ubb-sE-Kv7" secondAttribute="bottom" constant="378" id="MYk-Oh-JvK"/>
+                            <constraint firstItem="DR0-7C-d9B" firstAttribute="leading" secondItem="ubb-sE-Kv7" secondAttribute="leading" id="NKg-Ia-G42"/>
+                            <constraint firstAttribute="trailing" secondItem="ubb-sE-Kv7" secondAttribute="trailing" id="ffm-Gv-JNB"/>
+                            <constraint firstItem="IrS-8p-9HV" firstAttribute="leading" secondItem="DR0-7C-d9B" secondAttribute="trailing" constant="8" symbolic="YES" id="iZa-RT-5A2"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="DR0-7C-d9B" secondAttribute="bottom" constant="-2" id="kIZ-OG-A5m"/>
+                            <constraint firstItem="DR0-7C-d9B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="267" id="lW9-Fu-PTV"/>
+                            <constraint firstItem="ubb-sE-Kv7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xHw-ws-gRg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DWb-NS-tFC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="MU3-Jk-um2" id="tSN-h4-GLL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.5" y="376.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause" width="42" height="56"/>
+        <image name="play" width="48" height="61"/>
+    </resources>
+</document>
